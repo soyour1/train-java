@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "GET_ALL_USER",
+			"name": "GET_ALL_APPLICATION",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -24,7 +24,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/getAllUser",
+					"raw": "http://localhost:8080/api/application",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -32,20 +32,20 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"getAllUser"
+						"application"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "ADD_USER",
+			"name": "ADD_APPLICATION",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"user\": {\r\n      \"name\": \"Teo\",\r\n      \"email\": \"Teo@gmail.com\",\r\n      \"git_user\": \"teocut\",\r\n      \"items\": [\r\n          {\r\n            \"pid\": 2131,\r\n            \"name_project\": \"HTML\",\r\n            \"employment_mode\": \"employed\",\r\n            \"capacity\": \"full-time\",\r\n            \"duration\": 2,\r\n            \"start_year\": \"2021\",\r\n            \"role\": \"admin\",\r\n            \"team_size\": 4,\r\n            \"link_repo\": \"link_repo\",\r\n            \"link_url\": \"link_url\"\r\n          },\r\n          {\r\n            \"pid\": 1231,\r\n            \"name_project\": \"CSS\",\r\n            \"employment_mode\": \"employed\",\r\n            \"capacity\": \"full-time\",\r\n            \"duration\": 2,\r\n            \"start_year\": \"2022\",\r\n            \"role\": \"admin\",\r\n            \"team_size\": 4,\r\n            \"link_repo\": \"link_repo\",\r\n            \"link_url\": \"link_url\"\r\n          }\r\n      ]\r\n  }\r\n}",
+					"raw": "{\r\n  \"application\": {\r\n      \"name\": \"Son\",\r\n      \"email\": \"sonhh@gmail.com\",\r\n      \"gitUser\": \"sonhh\",\r\n      \"projects\": [\r\n          {\r\n            \"name\": \"HTML\",\r\n            \"employmentMode\": \"EMPLOYED\",\r\n            \"capacity\": \"FULL_TIME\",\r\n            \"durationInMonth\": 2,\r\n            \"startYear\": 2020,\r\n            \"role\": \"admin\",\r\n            \"teamSize\": 4,\r\n            \"linkRepo\": \"link_repo\",\r\n            \"liveUrl\": \"link_url\"\r\n          },\r\n          {\r\n            \"name\": \"CSS\",\r\n            \"employmentMode\": \"EMPLOYED\",\r\n            \"capacity\": \"FULL_TIME\",\r\n            \"durationInMonth\": 2,\r\n            \"startYear\": 2020,\r\n            \"role\": \"admin\",\r\n            \"teamSize\": 4,\r\n            \"linkRepo\": \"link_repo\",\r\n            \"liveUrl\": \"link_url\"\r\n          }\r\n      ]\r\n  }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,7 +53,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/add",
+					"raw": "http://localhost:8080/api/application",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -61,14 +61,14 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"add"
+						"application"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE_USER",
+			"name": "DELETE_APPLICATION",
 			"request": {
 				"method": "DELETE",
 				"header": [],
