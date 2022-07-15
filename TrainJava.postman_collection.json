@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "355a66c4-b087-4a1b-9480-bbd0a9e2d3e5",
+		"name": "TrainJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16190218"
+	},
+	"item": [
+		{
+			"name": "GET_ALL_USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"TuanNguyen\",\r\n    \"age\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/getAllUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getAllUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n      \"name\": \"Teo\",\r\n      \"email\": \"Teo@gmail.com\",\r\n      \"git_user\": \"teocut\",\r\n      \"items\": [\r\n          {\r\n            \"pid\": 2131,\r\n            \"name_project\": \"HTML\",\r\n            \"employment_mode\": \"employed\",\r\n            \"capacity\": \"full-time\",\r\n            \"duration\": 2,\r\n            \"start_year\": \"2021\",\r\n            \"role\": \"admin\",\r\n            \"team_size\": 4,\r\n            \"link_repo\": \"link_repo\",\r\n            \"link_url\": \"link_url\"\r\n          },\r\n          {\r\n            \"pid\": 1231,\r\n            \"name_project\": \"CSS\",\r\n            \"employment_mode\": \"employed\",\r\n            \"capacity\": \"full-time\",\r\n            \"duration\": 2,\r\n            \"start_year\": \"2022\",\r\n            \"role\": \"admin\",\r\n            \"team_size\": 4,\r\n            \"link_repo\": \"link_repo\",\r\n            \"link_url\": \"link_url\"\r\n          }\r\n      ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_APPLICATIONS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/getAllItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getAllItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXPORT_PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exportPDF",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exportPDF"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
