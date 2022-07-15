@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Service;
 
-import com.learnjava.trainJava.model.Items;
+import com.learnjava.trainJava.entity.Projects;
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.Font;
@@ -22,9 +22,9 @@ import com.lowagie.text.pdf.PdfWriter;
 
 @Service
 public class PDFGenerator {
-	private List<Items> items;
+	private List<Projects> items;
 
-	public PDFGenerator(List<Items> items) {
+	public PDFGenerator(List<Projects> items) {
 		this.items = items;
 	}
 	
@@ -68,20 +68,20 @@ public class PDFGenerator {
 		table.addCell(cell);
 	}
 
-	private void writeTableData(PdfPTable table) {
-		for (Items items : items) {
-			table.addCell(String.valueOf(items.getPid()));
-			table.addCell(items.getCapacity());
-			table.addCell(String.valueOf(items.getDuration()));
-			table.addCell(items.getEmployment_mode());
-			table.addCell(items.getName_project());
-			table.addCell(items.getLink_repo());
-			table.addCell(items.getLink_url());
-			table.addCell(items.getRole());
-			table.addCell(String.valueOf(items.getTeam_size()));
-			table.addCell(items.getStart_year());
-		}
-	}
+//	private void writeTableData(PdfPTable table) {
+//		for (Projects items : items) {
+//			table.addCell(String.valueOf(items.getPid()));
+//			table.addCell(items.getCapacity());
+//			table.addCell(String.valueOf(items.getDuration()));
+//			table.addCell(items.getEmployment_mode());
+//			table.addCell(items.getName_project());
+//			table.addCell(items.getLink_repo());
+//			table.addCell(items.getLink_url());
+//			table.addCell(items.getRole());
+//			table.addCell(String.valueOf(items.getTeam_size()));
+//			table.addCell(items.getStart_year());
+//		}
+//	}
 
 	public void export(HttpServletResponse response) throws DocumentException, IOException {
 //		Document document = new Document(PageSize.A4);
@@ -122,7 +122,7 @@ public class PDFGenerator {
 		table.setSpacingBefore(10);
 
 		writeTableHeader(table);
-		writeTableData(table);
+//		writeTableData(table);
 
 		document.add(table);
 

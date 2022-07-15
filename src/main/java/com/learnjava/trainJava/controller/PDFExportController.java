@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.learnjava.trainJava.model.Items;
-import com.learnjava.trainJava.repository.ItemsRepository;
+import com.learnjava.trainJava.entity.Projects;
+import com.learnjava.trainJava.repository.ProjectsRepository;
 import com.learnjava.trainJava.service.PDFGenerator;
-import com.learnjava.trainJava.service.UserService;
+import com.learnjava.trainJava.service.ApplicationService;
 import com.lowagie.text.DocumentException;
 
 
@@ -23,10 +23,10 @@ import com.lowagie.text.DocumentException;
 @Controller
 public class PDFExportController {
 	@Autowired
-	private UserService userService;
+	private ApplicationService userService;
 	
 	@Autowired 
-	private ItemsRepository itemsRepository;
+	private ProjectsRepository itemsRepository;
 	
 	private final PDFGenerator pdfGeneratorService;
 	
@@ -44,9 +44,9 @@ public class PDFExportController {
 		String headerValue = "attachment; filename=pdf_" + currentDateTime + ".pdf";
 		response.setHeader(headerkey, headerValue);
 		
-		List<Items> items = userService.listAll();
-		PDFGenerator exporter = new PDFGenerator(items);
-		exporter.export(response);
+//		List<Projects> items = userService.listAll();
+//		PDFGenerator exporter = new PDFGenerator(items);
+//		exporter.export(response);
 //		this.pdfGeneratorService.export(response);
 	}
 }
